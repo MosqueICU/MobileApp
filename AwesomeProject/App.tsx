@@ -2,7 +2,7 @@
 import Mapbox, {PointAnnotation} from '@rnmapbox/maps';
 import {FillExtrusionLayer} from '@rnmapbox/maps';
 import React, {useCallback, useMemo, useRef} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import BottomSheet from '@gorhom/bottom-sheet';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {Dimensions} from 'react-native';
@@ -100,11 +100,12 @@ const App = () => {
                   borderColor: 'grey',
                   borderWidth: 0.4,
                   // borderRadius: 10,
-
                   borderTopRightRadius: 10,
+                  borderBottomLeftRadius: 5,
                   width: 30,
                   alignItems: 'center',
                   height: 30,
+                  opacity: 0.7,
                   backgroundColor: 'white',
                 }}>
                 <Text
@@ -117,13 +118,18 @@ const App = () => {
               </View>
               <Text
                 style={{
-                  margin: 10,
+                  margin: 15,
                   fontSize: 25,
                   fontFamily: 'DINOffcPro-Black',
                   color: 'white',
                 }}>
                 Mosques near you
               </Text>
+              {/* <Image
+                source={require('./assets/images/Mosque2.png')}
+                style={styles.image}
+                resizeMode="cover"
+              /> */}
             </View>
           </View>
         </BottomSheet>
@@ -143,6 +149,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'grey',
+  },
+  image: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: -50, // Adjust this value to set the offset from the top
+    left: -50, // Adjust this value to set the offset from the left
   },
   contentContainer: {
     flex: 1,
