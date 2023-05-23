@@ -89,12 +89,41 @@ const App = () => {
                 borderRadius: 10,
                 height: height / 10,
                 borderColor: 'grey',
-                borderWidth: 0.3,
+                borderWidth: 0.4,
                 margin: 10,
               }}>
-              <View style={{flex: 1, padding: 3}}>
-                <Text style={{color: 'white'}}>Awesome 🎉</Text>
+              <View
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  right: 0,
+                  borderColor: 'grey',
+                  borderWidth: 0.4,
+                  // borderRadius: 10,
+
+                  borderTopRightRadius: 10,
+                  width: 30,
+                  alignItems: 'center',
+                  height: 30,
+                  backgroundColor: 'white',
+                }}>
+                <Text
+                  style={{
+                    fontSize: 25,
+                    fontFamily: 'DINOffcPro-Black',
+                  }}>
+                  3
+                </Text>
               </View>
+              <Text
+                style={{
+                  margin: 10,
+                  fontSize: 25,
+                  fontFamily: 'DINOffcPro-Black',
+                  color: 'white',
+                }}>
+                Mosques near you
+              </Text>
             </View>
           </View>
         </BottomSheet>
