@@ -6,7 +6,7 @@ Mapbox.setAccessToken(
   'pk.eyJ1IjoibW9zcXVlaWN1IiwiYSI6ImNsaHhhb3MxczBzN2YzZ3BnNHRkMW9rdHIifQ.csS9yZXj5lD3BIw-Kcw6TQ',
 );
 
-const MapboxComponent = () => {
+const App = () => {
   return (
     <Mapbox.MapView
       style={{flex: 1}}
@@ -18,7 +18,7 @@ const MapboxComponent = () => {
         pitch={60}
         animationMode={'flyTo'}
         animationDuration={2000}
-        centerCoordinate={[-77.035, 38.875]}
+        centerCoordinate={[-1.13, 52.632]} // eslint-disable-next-line prettier/prettier
       />
       <FillExtrusionLayer
         minZoomLevel={15}
@@ -37,4 +37,4 @@ const MapboxComponent = () => {
   );
 };
 
-export default MapboxComponent;
+export default App;
