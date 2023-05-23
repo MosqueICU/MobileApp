@@ -1,6 +1,7 @@
 // import React from 'react';
-import Mapbox from '@rnmapbox/maps';
+import Mapbox, {PointAnnotation} from '@rnmapbox/maps';
 import {FillExtrusionLayer} from '@rnmapbox/maps';
+import {MarkerView} from '@rnmapbox/maps';
 
 Mapbox.setAccessToken(
   'pk.eyJ1IjoibW9zcXVlaWN1IiwiYSI6ImNsaHhhb3MxczBzN2YzZ3BnNHRkMW9rdHIifQ.csS9yZXj5lD3BIw-Kcw6TQ',
@@ -20,6 +21,14 @@ const Map = () => {
         animationDuration={2000}
         centerCoordinate={[-1.13, 52.632]} // eslint-disable-next-line prettier/prettier
       />
+      <View>
+        <PointAnnotation id="markerId" coordinate={[-1.13, 52.632]}>
+          <View style={styles.marker}>
+            {/* Add your marker content here */}
+            <Text>Awesome 🎉</Text>
+          </View>
+        </PointAnnotation>
+      </View>
       <FillExtrusionLayer
         minZoomLevel={15}
         maxZoomLevel={30}
@@ -49,7 +58,7 @@ const App = () => {
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   // variables
-  const snapPoints = useMemo(() => ['15%', '25%'], []);
+  const snapPoints = useMemo(() => ['15%', '60%', '90%'], []);
 
   // callbacks
   const handleSheetChanges = useCallback((index: number) => {
@@ -77,6 +86,12 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
+  marker: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: 'red',
+  },
   container: {
     flex: 1,
     backgroundColor: 'grey',
