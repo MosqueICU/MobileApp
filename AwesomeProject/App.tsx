@@ -5,11 +5,13 @@ import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MapPage from './pages/MapPage';
+import RiveComponent from './components/RiveComponent';
 
 function HomePage() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Home Screen</Text>
+      <RiveComponent />
     </View>
   );
 }
