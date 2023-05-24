@@ -15,7 +15,7 @@ Mapbox.setAccessToken(
   'pk.eyJ1IjoibW9zcXVlaWN1IiwiYSI6ImNsaHhhb3MxczBzN2YzZ3BnNHRkMW9rdHIifQ.csS9yZXj5lD3BIw-Kcw6TQ',
 );
 
-const Map = () => {
+export const Map = () => {
   return (
     <Mapbox.MapView
       style={{flex: 1}}
@@ -52,6 +52,42 @@ const Map = () => {
   );
 };
 
+export const MiniMap = () => {
+  return (
+    <Mapbox.MapView
+      style={{flex: 1, borderRadius: 10}}
+      logoEnabled={false}
+      compassEnabled={false}
+      styleURL="mapbox://styles/mosqueicu/cli0jf8m402ff01qyffls6jdc/draft">
+      <Mapbox.Camera
+        zoomLevel={13}
+        // pitch={60}
+        animationMode={'flyTo'}
+        animationDuration={2000}
+        centerCoordinate={[-1.13, 52.632]} // eslint-disable-next-line prettier/prettier
+      />
+      <View>
+        <PointAnnotation id="markerId" coordinate={[-1.13, 52.632]}>
+          <View style={styles.marker}>
+            {/* Add your marker content here */}
+            <Text>Awesome 🎉</Text>
+          </View>
+        </PointAnnotation>
+      </View>
+      <FillExtrusionLayer
+        minZoomLevel={10}
+        maxZoomLevel={30}
+        style={{
+          visibility: 'visible',
+          fillExtrusionOpacity: 0.5,
+          fillExtrusionHeight: 20,
+          fillExtrusionOpacityTransition: {duration: 300, delay: 50},
+        }}
+        id="building"
+      />
+    </Mapbox.MapView>
+  );
+};
 // export default MapPage;
 
 const MapPage = () => {
@@ -59,7 +95,7 @@ const MapPage = () => {
   const bottomSheetRef = useRef(null);
 
   // variables
-  const snapPoints = useMemo(() => ['20%', '60%', '90%'], []);
+  const snapPoints = useMemo(() => ['60%', '20%', '90%'], []);
 
   // callbacks
   const handleSheetChanges = useCallback(index => {
