@@ -2,7 +2,7 @@
 import Mapbox, {PointAnnotation} from '@rnmapbox/maps';
 import {FillExtrusionLayer} from '@rnmapbox/maps';
 import React, {useCallback, useMemo, useRef} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import BottomSheet from '@gorhom/bottom-sheet';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {Dimensions} from 'react-native';
@@ -56,13 +56,13 @@ const Map = () => {
 
 const App = () => {
   // ref
-  const bottomSheetRef = useRef<BottomSheet>(null);
+  const bottomSheetRef = useRef(null);
 
   // variables
   const snapPoints = useMemo(() => ['20%', '60%', '90%'], []);
 
   // callbacks
-  const handleSheetChanges = useCallback((index: number) => {
+  const handleSheetChanges = useCallback(index => {
     console.log('handleSheetChanges', index);
   }, []);
 
