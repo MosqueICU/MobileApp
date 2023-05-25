@@ -10,7 +10,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import FlatlistComponent, {
   FlatlistHorizontalComponent,
 } from './components/FlatlistComponent';
-import {NativeBaseProvider, Heading, Box, HStack} from 'native-base';
+import {NativeBaseProvider, Heading, Box, Center, HStack} from 'native-base';
 import {
   GestureHandlerRootView,
   TouchableOpacity,
@@ -37,9 +37,9 @@ function HomePage() {
           }}>
           Isha in 3h 20m
         </Text>
-        <Box h="150">
+        <Center mt="10" h="50">
           <RiveComponent />
-        </Box>
+        </Center>
       </Box>
       <Box>
         <Box bg="#020002">
@@ -47,7 +47,7 @@ function HomePage() {
         </Box>
 
         <Box flex="1" p="10" bg="#020002">
-          <HStack justifyContent={'space-between'}>
+          <HStack mb="5" justifyContent={'space-between'}>
             <Text
               style={{
                 fontSize: 15,
@@ -102,6 +102,14 @@ function HomePage() {
               </Box>
             </Box>
           </TouchableOpacity>
+          <Center pb="10">
+            <Heading sub color="white">
+              You are not subscribed to anyone
+            </Heading>
+            <Heading sub color="grey">
+              News from subscriptions will appear here
+            </Heading>
+          </Center>
         </Box>
       </Box>
     </ScrollView>
@@ -181,7 +189,8 @@ function App() {
             <Stack.Group screenOptions={{headerShown: false}}>
               <Stack.Screen name="Home" component={HomePage} />
             </Stack.Group>
-            <Stack.Group screenOptions={{presentation: 'modal'}}>
+            <Stack.Group
+              screenOptions={{presentation: 'modal', headerShown: false}}>
               <Stack.Screen name="Map" component={MapPage} />
             </Stack.Group>
             {/* <Stack.Group screenOptions={{headerShown: false}}>

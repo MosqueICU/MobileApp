@@ -6,6 +6,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import BottomSheet from '@gorhom/bottom-sheet';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {Dimensions} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const {width, height} = Dimensions.get('window');
 
@@ -91,6 +92,7 @@ export const MiniMap = () => {
 // export default MapPage;
 
 const MapPage = () => {
+  const navigation = useNavigation();
   // ref
   const bottomSheetRef = useRef(null);
 
@@ -108,6 +110,11 @@ const MapPage = () => {
       <View style={styles.container}>
         <Map />
         <BottomSheet
+          enablePanDownToClose
+          onClose={() => {
+            console.log('onClose');
+            navigation.navigate('Home');
+          }}
           ref={bottomSheetRef}
           index={1}
           // eslint-disable-next-line react-native/no-inline-styles

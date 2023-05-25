@@ -16,6 +16,7 @@
 		7699B88040F8A987B510C191 /* libPods-AwesomeProject-AwesomeProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-AwesomeProject-AwesomeProjectTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9F560F562A1EC4F80024A9CE /* ratings.riv in Resources */ = {isa = PBXBuildFile; fileRef = 9F560F552A1EC4F80024A9CE /* ratings.riv */; };
+		9F560F582A1EC7460024A9CE /* abstract.riv in Resources */ = {isa = PBXBuildFile; fileRef = 9F560F572A1EC7460024A9CE /* abstract.riv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AwesomeProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig"; path = "Target Support Files/Pods-AwesomeProject-AwesomeProjectTests/Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F560F552A1EC4F80024A9CE /* ratings.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = ratings.riv; path = ../../../../../../../Downloads/ratings.riv; sourceTree = "<group>"; };
+		9F560F572A1EC7460024A9CE /* abstract.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = abstract.riv; path = ../../../../../../../Downloads/abstract.riv; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F5893CE88D0246CFB1B85437 /* DINOffcPro-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DINOffcPro-Black.ttf"; path = "../assets/fonts/DINOffcPro-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				9F560F552A1EC4F80024A9CE /* ratings.riv */,
+				9F560F572A1EC7460024A9CE /* abstract.riv */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				9F560F582A1EC7460024A9CE /* abstract.riv in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				9F560F562A1EC4F80024A9CE /* ratings.riv in Resources */,
 				601D60E128D543E7BD2F2380 /* DINOffcPro-Black.ttf in Resources */,
