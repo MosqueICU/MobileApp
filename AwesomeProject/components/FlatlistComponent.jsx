@@ -13,8 +13,10 @@ import {
   NativeBaseProvider,
 } from 'native-base';
 import {MyListData} from '../data';
+import {useNavigation} from '@react-navigation/native';
+import {Pressable} from 'react-native';
 
-export default function FlatlistComponent() {
+export default function ExploreFlatlist() {
   const data = [
     {
       id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -60,20 +62,22 @@ export default function FlatlistComponent() {
                 <Text
                   color="coolGray.300"
                   style={{
-                    fontSize: 15,
-                    fontFamily: 'DINOffcPro-Black',
+                    fontSize: 10,
+                    fontWeight: '900',
+                    fontFamily: 'Inter-Black',
                   }}>
                   {item.recentText}
                 </Text>
 
-                <Heading
+                <Text
+                  style={{fontFamily: 'Agrandir-GrandHeavy'}}
                   sub
                   _dark={{
                     color: 'warmGray.50',
                   }}
                   color="coolGray.600">
                   {item.fullName}
-                </Heading>
+                </Text>
               </VStack>
               <Spacer />
               {/* <Text
@@ -94,78 +98,44 @@ export default function FlatlistComponent() {
   );
 }
 
-export function FlatlistHorizontalComponent() {
-  const data = [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      fullName: 'Aafreen Khan',
-      timeStamp: '12:47 PM',
-      recentText: 'Good Day!',
-      avatarUrl:
-        'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      fullName: 'Sujitha Mathur',
-      timeStamp: '11:11 PM',
-      recentText: 'Cheer up, there!',
-      avatarUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyEaZqT3fHeNrPGcnjLLX1v_W4mvBlgpwxnA&usqp=CAU',
-    },
-    {
-      id: '28694a0f-3da1-471f-bd96-142456e29d72',
-      fullName: 'Kiara',
-      timeStamp: '12:47 PM',
-      recentText: 'I will call today.',
-      avatarUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU',
-    },
-    {
-      id: '28694a0f-3da1-471f-bd96-142456e29d72',
-      fullName: 'Kiara',
-      timeStamp: '12:47 PM',
-      recentText: 'I will call today.',
-      avatarUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU',
-    },
-    {
-      id: '28694a0f-3da1-471f-bd96-142456e29d72',
-      fullName: 'Kiara',
-      timeStamp: '12:47 PM',
-      recentText: 'I will call today.',
-      avatarUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU',
-    },
-    {
-      id: '28694a0f-3da1-471f-bd96-142456e29d72',
-      fullName: 'Kiara',
-      timeStamp: '12:47 PM',
-      recentText: 'I will call today.',
-      avatarUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU',
-    },
-  ];
+export function MyListFlatlist() {
+  const navigation = useNavigation();
   return (
     <Box ml="5" bg="#020002" mb="5">
       <FlatList
         horizontal
         data={MyListData}
         renderItem={({item}) => (
-          <VStack space={1}>
-            <Center
-              w="100"
-              h="100"
-              bg="#111111"
-              borderColor="#2F2F2F"
-              rounded="md"
-              borderWidth="2.5px"
-              m="2">
-              <Image w="50" h="50" source={item.uri} />
-            </Center>
-            <Heading m="2" color="white" sub>
-              {item.title}
-            </Heading>
-          </VStack>
+          <Pressable
+            onPress={() => {
+              navigation.navigate(item.route);
+            }}>
+            <VStack space={1}>
+              <Center
+                w="100"
+                h="100"
+                bg="#111111"
+                borderColor="#2F2F2F"
+                rounded="md"
+                borderWidth="2.5px"
+                m="2">
+                <Image w="50" h="50" source={item.uri} />
+              </Center>
+              {/* <Heading m="2" color="white" sub>
+                {item.title}
+              </Heading> */}
+              <Text
+                style={{
+                  marginLeft: 10,
+                  fontSize: 10,
+                  fontFamily: 'Inter-Black',
+                  fontWeight: '600',
+                  color: 'white',
+                }}>
+                {item.title}
+              </Text>
+            </VStack>
+          </Pressable>
         )}
         keyExtractor={item => item.id}
       />

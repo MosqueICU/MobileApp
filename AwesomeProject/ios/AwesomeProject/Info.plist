@@ -54,6 +54,24 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>DINOffcPro-Black.ttf</string>
+		<string>Agrandir-GrandHeavy.otf</string>
+		<string>Agrandir-GrandLight.otf</string>
+		<string>Agrandir-Narrow.otf</string>
+		<string>Agrandir-Regular.otf</string>
+		<string>Agrandir-TextBold.otf</string>
+		<string>Agrandir-ThinItalic.otf</string>
+		<string>Agrandir-Tight.otf</string>
+		<string>Agrandir-WideBlackItalic.otf</string>
+		<string>Agrandir-WideLight.otf</string>
+		<string>Inter-Black.ttf</string>
+		<string>Inter-Bold.ttf</string>
+		<string>Inter-ExtraBold.ttf</string>
+		<string>Inter-ExtraLight.ttf</string>
+		<string>Inter-Light.ttf</string>
+		<string>Inter-Medium.ttf</string>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-SemiBold.ttf</string>
+		<string>Inter-Thin.ttf</string>
 	</array>
 </dict>
 </plist>

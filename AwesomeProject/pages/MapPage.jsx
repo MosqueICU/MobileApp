@@ -12,6 +12,7 @@ const {width, height} = Dimensions.get('window');
 
 console.log('Screen Width: ', width);
 console.log('Screen Height: ', height);
+
 Mapbox.setAccessToken(
   'pk.eyJ1IjoibW9zcXVlaWN1IiwiYSI6ImNsaHhhb3MxczBzN2YzZ3BnNHRkMW9rdHIifQ.csS9yZXj5lD3BIw-Kcw6TQ',
 );
