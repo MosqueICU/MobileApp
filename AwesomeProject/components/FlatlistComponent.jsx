@@ -15,6 +15,7 @@ import {
 import {MyListData} from '../data';
 import {useNavigation} from '@react-navigation/native';
 import {Pressable} from 'react-native';
+import {EditionsData} from '../data.hadith';
 
 export default function ExploreFlatlist() {
   const data = [
@@ -105,6 +106,51 @@ export function MyListFlatlist() {
       <FlatList
         horizontal
         data={MyListData}
+        renderItem={({item}) => (
+          <Pressable
+            onPress={() => {
+              navigation.navigate(item.route);
+            }}>
+            <VStack space={1}>
+              <Center
+                w="100"
+                h="100"
+                bg="#111111"
+                borderColor="#2F2F2F"
+                rounded="md"
+                borderWidth="2.5px"
+                m="2">
+                <Image w="50" h="50" source={item.uri} />
+              </Center>
+              {/* <Heading m="2" color="white" sub>
+                {item.title}
+              </Heading> */}
+              <Text
+                style={{
+                  marginLeft: 10,
+                  fontSize: 10,
+                  fontFamily: 'Inter-Black',
+                  fontWeight: '600',
+                  color: 'white',
+                }}>
+                {item.title}
+              </Text>
+            </VStack>
+          </Pressable>
+        )}
+        keyExtractor={item => item.id}
+      />
+    </Box>
+  );
+}
+
+export function HadithEditionsFlatlist() {
+  const navigation = useNavigation();
+  return (
+    <Box ml="5" bg="#020002" mb="5">
+      <FlatList
+        horizontal
+        data={EditionsData}
         renderItem={({item}) => (
           <Pressable
             onPress={() => {

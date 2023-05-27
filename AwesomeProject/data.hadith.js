@@ -1,4 +1,4 @@
-export const MyListData = [
+export const EditionsData = [
   {
     title: 'Hadith',
     uri: require('./assets/images/AlQuranBook2.png'),
@@ -41,4 +41,3 @@ export const MyListData = [
     uri: require('./assets/images/PrayerRugCarpet3.png'),
   },
 ];
-
