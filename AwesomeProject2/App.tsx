@@ -9,6 +9,12 @@ import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 import HomePage from './pages/HomePage';
 import {NativeBaseProvider} from 'native-base';
 import QuranPage from './pages/QuranPage';
+import {
+  QuranSurahListenScreen,
+  QuranSurahScreen,
+} from './pages/QuranPage.Surah';
+import HadithPage from './pages/HadithPage';
+import CharityPage from './pages/CharityPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +40,23 @@ function App() {
                 <Stack.Screen name="Thikr" component={ThikrPage} />
                 <Stack.Screen name="Educate" component={EducatePage} /> */}
                 <Stack.Screen name="Quran" component={QuranPage} />
+                <Stack.Screen name="Hadith" component={HadithPage} />
+                <Stack.Screen name="Charity" component={CharityPage} />
+              </Stack.Group>
+              <Stack.Group screenOptions={{headerShown: true}}>
+                <Stack.Screen name="QuranSurah" component={QuranSurahScreen} />
+                <Stack.Screen
+                  name="QuranSurahListen"
+                  component={QuranSurahListenScreen}
+                />
+                <Stack.Screen
+                  name="QuranSurahRead"
+                  component={QuranSurahListenScreen}
+                />
+                <Stack.Screen
+                  name="HadithRandom"
+                  component={QuranSurahScreen}
+                />
               </Stack.Group>
             </Stack.Navigator>
           </NavigationContainer>

@@ -8,7 +8,7 @@ import {useNavigation} from '@react-navigation/native';
 import {MyListFlatlist} from '../components/FlatlistComponent';
 import {Heading, VStack, Box, Center, HStack} from 'native-base';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import ExploreFlatlist from '../components/FlatlistComponent';
+import {ExploreFlatlist} from '../components/FlatlistComponent';
 import BottomsheetModalComponent from '../components/BottomsheetModalComponent';
 import {CustomHeader, CustomSubHeader} from '../components/TextVariations';
 

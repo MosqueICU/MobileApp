@@ -9,7 +9,11 @@ const GradientImage = ({imageUri}) => {
         colors={['transparent', 'white']}
         style={styles.linearGradient}>
         <Text style={styles.buttonText}>Sign in with Facebook</Text>
-        <Image style={{height: 100, width: 100}} source={imageUri} />
+        <Image
+          alt={imageUri}
+          style={{height: 100, width: 100}}
+          source={imageUri}
+        />
       </LinearGradient>
       <Text style={{color: 'white'}}>hello</Text>
       {/* <LinearGradient

@@ -9,15 +9,107 @@ import {
   Text,
   Image,
   Spacer,
+  Pressable,
   Center,
   NativeBaseProvider,
+  Divider,
 } from 'native-base';
 import {MyListData} from '../data';
 import {useNavigation} from '@react-navigation/native';
-import {Pressable} from 'react-native';
 import {EditionsData} from '../data.hadith';
 
-export default function ExploreFlatlist() {
+export function SurahFlatlist({surahs}) {
+  const navigation = useNavigation();
+  return (
+    <Box>
+      <FlatList
+        data={surahs}
+        renderItem={({item}) => (
+          <Pressable
+            onPress={() => {
+              navigation.goBack();
+              navigation.navigate('QuranSurah');
+            }}>
+            <VStack p="5" space={2} w="100%">
+              <HStack justifyContent="space-between">
+                <VStack>
+                  <Text style={{color: 'grey'}}>
+                    {item.englishNameTranslation}
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: 'Agrandir-GrandHeavy',
+                      fontSize: 20,
+                      color: 'white',
+                    }}>
+                    {item.englishName}
+                  </Text>
+                </VStack>
+                <VStack>
+                  <Text style={{color: 'grey'}}>
+                    {item.numberOfAyahs} Ayahs
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: 'Agrandir-GrandHeavy',
+                      fontSize: 20,
+                      color: 'white',
+                    }}>
+                    {item.name}
+                  </Text>
+                </VStack>
+              </HStack>
+              <Text style={{color: 'grey'}}>
+                The Opening' or 'The Opener'), is the first surah (chapter) of
+                the Quran. It consists of 7 ayah (verses) which are a prayer for
+                guidance and mercy. Al-Fatiha is recited in Muslim obligatory
+                and voluntary prayers, known as salah.
+              </Text>
+            </VStack>
+            <HStack space={5} p="5">
+              <Pressable
+                onPress={() => {
+                  navigation.goBack();
+                  navigation.navigate('QuranSurahRead');
+                }}>
+                <Box p="2" bg="grey" rounded="md" opacity="0.9">
+                  <Text
+                    color="white"
+                    style={{
+                      fontWeight: '900',
+                      fontFamily: 'Inter-Medium',
+                    }}>
+                    Read
+                  </Text>
+                </Box>
+              </Pressable>
+              <Pressable
+                onPress={() => {
+                  navigation.goBack();
+                  navigation.navigate('QuranSurahListen');
+                }}>
+                <Box p="2">
+                  <Text
+                    color="white"
+                    style={{
+                      fontWeight: '900',
+                      fontFamily: 'Inter-Medium',
+                    }}>
+                    Listen
+                  </Text>
+                </Box>
+              </Pressable>
+            </HStack>
+            <Divider bg="grey" />
+          </Pressable>
+        )}
+        keyExtractor={item => item.id}
+      />
+    </Box>
+  );
+}
+
+export function ExploreFlatlist() {
   const data = [
     {
       id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -57,7 +149,12 @@ export default function ExploreFlatlist() {
             py="2">
             <HStack space={[2, 3]} justifyContent="space-between">
               <Box w={10} h={10} rounded="xl">
-                <Image source={item.avatarUrl} width="100%" height="100%" />
+                <Image
+                  alt={item.recentText}
+                  source={item.avatarUrl}
+                  width="100%"
+                  height="100%"
+                />
               </Box>
               <VStack>
                 <Text
@@ -71,7 +168,7 @@ export default function ExploreFlatlist() {
                 </Text>
 
                 <Text
-                  style={{fontFamily: 'Inter-Regular'}}
+                  style={{fontFamily: 'Agrandir-GrandHeavy'}}
                   sub
                   _dark={{
                     color: 'warmGray.50',
@@ -113,14 +210,14 @@ export function MyListFlatlist() {
             }}>
             <VStack space={1}>
               <Center
-                w="100"
-                h="100"
+                w={100}
+                h={100}
                 bg="#111111"
                 borderColor="#2F2F2F"
                 rounded="md"
-                borderWidth="2.5px"
-                m="2">
-                <Image w="50" h="50" source={item.uri} />
+                borderWidth={2.5}
+                m={2}>
+                <Image alt={item.title} w={50} h={50} source={item.uri} />
               </Center>
               {/* <Heading m="2" color="white" sub>
                 {item.title}
@@ -147,7 +244,7 @@ export function MyListFlatlist() {
 export function HadithEditionsFlatlist() {
   const navigation = useNavigation();
   return (
-    <Box ml="5" bg="#020002" mb="5">
+    <Box ml={5} bg="#020002" mb={5}>
       <FlatList
         horizontal
         data={EditionsData}
@@ -156,17 +253,44 @@ export function HadithEditionsFlatlist() {
             onPress={() => {
               navigation.navigate(item.route);
             }}>
-            <VStack space={1}>
-              <Center
-                w="100"
-                h="100"
-                bg="#111111"
-                borderColor="#2F2F2F"
-                rounded="md"
-                borderWidth="2.5px"
-                m="2">
-                <Image w="50" h="50" source={item.uri} />
-              </Center>
+            <VStack p={5} space={1}>
+              <Image alt={item.title} w={124} h={183} source={item.uri} />
+              {/* <Heading m="2" color="white" sub>
+                {item.title}
+              </Heading> */}
+              <Text
+                style={{
+                  marginLeft: 10,
+                  fontSize: 10,
+                  fontFamily: 'Inter-Black',
+                  fontWeight: '600',
+                  color: 'white',
+                }}>
+                {item.title}
+              </Text>
+            </VStack>
+          </Pressable>
+        )}
+        keyExtractor={item => item.id}
+      />
+    </Box>
+  );
+}
+
+export function HadithCommunityEditionsFlatlist() {
+  const navigation = useNavigation();
+  return (
+    <Box ml={5} bg="#020002" mb={5}>
+      <FlatList
+        horizontal
+        data={EditionsData}
+        renderItem={({item}) => (
+          <Pressable
+            onPress={() => {
+              navigation.navigate(item.route);
+            }}>
+            <VStack p={5} space={1}>
+              <Image w={371 / 3} h={550 / 3} source={item.uri} />
               {/* <Heading m="2" color="white" sub>
                 {item.title}
               </Heading> */}

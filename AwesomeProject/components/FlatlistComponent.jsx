@@ -57,7 +57,12 @@ export default function ExploreFlatlist() {
             py="2">
             <HStack space={[2, 3]} justifyContent="space-between">
               <Box w={10} h={10} rounded="xl">
-                <Image source={item.avatarUrl} width="100%" height="100%" />
+                <Image
+                  alt={item.recentText}
+                  source={item.avatarUrl}
+                  width="100%"
+                  height="100%"
+                />
               </Box>
               <VStack>
                 <Text
@@ -120,7 +125,7 @@ export function MyListFlatlist() {
                 rounded="md"
                 borderWidth="2.5px"
                 m="2">
-                <Image w="50" h="50" source={item.uri} />
+                <Image alt={item.title} w="50" h="50" source={item.uri} />
               </Center>
               {/* <Heading m="2" color="white" sub>
                 {item.title}
@@ -165,7 +170,7 @@ export function HadithEditionsFlatlist() {
                 rounded="md"
                 borderWidth="2.5px"
                 m="2">
-                <Image w="50" h="50" source={item.uri} />
+                <Image alt={item.title} w="50" h="50" source={item.uri} />
               </Center>
               {/* <Heading m="2" color="white" sub>
                 {item.title}
