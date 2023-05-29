@@ -6,27 +6,39 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
-
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+import HomePage from './pages/HomePage';
+import {NativeBaseProvider} from 'native-base';
+import QuranPage from './pages/QuranPage';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <GestureHandlerRootView style={{flex: 1}}>
-      <BottomSheetModalProvider>
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="Home" component={HomeScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </BottomSheetModalProvider>
+      <NativeBaseProvider>
+        <BottomSheetModalProvider>
+          <NavigationContainer>
+            <Stack.Navigator>
+              <Stack.Group screenOptions={{headerShown: false}}>
+                <Stack.Screen name="Home" component={HomePage} />
+              </Stack.Group>
+              {/* <Stack.Screen name="Home" component={HomePage} /> */}
+              <Stack.Group
+                screenOptions={{presentation: 'modal', headerShown: false}}>
+                {/* <Stack.Screen name="Hadith" component={HadithPage} />
+                <Stack.Screen name="Compass" component={CompassPage} />
+                <Stack.Screen name="Dua" component={DuaPage} />
+                <Stack.Screen name="Charity" component={CharityPage} />
+                <Stack.Screen name="Fasting" component={FastingPage} />
+                <Stack.Screen name="Prayer" component={PrayerPage} />
+                <Stack.Screen name="Thikr" component={ThikrPage} />
+                <Stack.Screen name="Educate" component={EducatePage} /> */}
+                <Stack.Screen name="Quran" component={QuranPage} />
+              </Stack.Group>
+            </Stack.Navigator>
+          </NavigationContainer>
+        </BottomSheetModalProvider>
+      </NativeBaseProvider>
     </GestureHandlerRootView>
   );
 }
