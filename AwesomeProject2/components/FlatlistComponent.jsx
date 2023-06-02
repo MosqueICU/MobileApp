@@ -17,6 +17,8 @@ import {
 import {MyListData} from '../data';
 import {useNavigation} from '@react-navigation/native';
 import {EditionsData} from '../data.hadith';
+import {CustomSubHeader} from './TextVariations';
+import {ReciterLanguagesData} from '../data.quran';
 
 export function SurahFlatlist({surahs}) {
   const navigation = useNavigation();
@@ -28,7 +30,7 @@ export function SurahFlatlist({surahs}) {
           <Pressable
             onPress={() => {
               navigation.goBack();
-              navigation.navigate('QuranSurah');
+              navigation.navigate('QuranSurah', {surah: item});
             }}>
             <VStack p="5" space={2} w="100%">
               <HStack justifyContent="space-between">
@@ -70,7 +72,7 @@ export function SurahFlatlist({surahs}) {
               <Pressable
                 onPress={() => {
                   navigation.goBack();
-                  navigation.navigate('QuranSurahRead');
+                  navigation.navigate('QuranSurahRead', {surah: item});
                 }}>
                 <Box p="2" bg="grey" rounded="md" opacity="0.9">
                   <Text
@@ -86,7 +88,7 @@ export function SurahFlatlist({surahs}) {
               <Pressable
                 onPress={() => {
                   navigation.goBack();
-                  navigation.navigate('QuranSurahListen');
+                  navigation.navigate('QuranSurahListen', {surah: item});
                 }}>
                 <Box p="2">
                   <Text
@@ -203,6 +205,52 @@ export function MyListFlatlist() {
       <FlatList
         horizontal
         data={MyListData}
+        renderItem={({item}) => (
+          <Pressable
+            onPress={() => {
+              navigation.navigate(item.route);
+            }}>
+            <VStack space={1}>
+              <Center
+                w={100}
+                h={100}
+                bg="#111111"
+                borderColor="#2F2F2F"
+                rounded="md"
+                borderWidth={2.5}
+                m={2}>
+                <Image alt={item.title} w={50} h={50} source={item.uri} />
+              </Center>
+              {/* <Heading m="2" color="white" sub>
+                {item.title}
+              </Heading> */}
+              <Text
+                style={{
+                  marginLeft: 10,
+                  fontSize: 10,
+                  fontFamily: 'Inter-Black',
+                  fontWeight: '600',
+                  color: 'white',
+                }}>
+                {item.title}
+              </Text>
+            </VStack>
+          </Pressable>
+        )}
+        keyExtractor={item => item.id}
+      />
+    </Box>
+  );
+}
+
+export function ReciterLanguagesFlatlist() {
+  const navigation = useNavigation();
+  return (
+    <Box ml="5" bg="#020002" mb="5">
+      <CustomSubHeader text={'Available languages'} />
+      <FlatList
+        horizontal
+        data={ReciterLanguagesData}
         renderItem={({item}) => (
           <Pressable
             onPress={() => {

@@ -23,6 +23,8 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		84CA88EEFE3D45B181865573 /* Agrandir-GrandLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB04B60B637949DEA97955D6 /* Agrandir-GrandLight.otf */; };
 		940121454C0544EA9B85D1C0 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 612D8441221042D198153B83 /* Inter-Light.ttf */; };
+		9F8DFA472A250E1E00208904 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DFA462A250E1E00208904 /* dummy.swift */; };
+		9F9AD5D92A2A31B700F4C36E /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 9F9AD5D82A2A31B600F4C36E /* fonts */; };
 		BF6804CB5FB447DBAB8AF7FF /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1954F4A6D5C4EA38B05E9F8 /* Inter-ExtraLight.ttf */; };
 		CC13B201E8284F4FB49F42ED /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 678E6A15C70542ED868369A2 /* Inter-SemiBold.ttf */; };
 		CC53551932BB402EB24C3BEC /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31EDE708C274393AAF7CF37 /* Inter-ExtraBold.ttf */; };
@@ -49,9 +51,9 @@
 		00E356EE1AD99517003FC87E /* AwesomeProject2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeProject2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AwesomeProject2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeProject2Tests.m; sourceTree = "<group>"; };
-		0170248D77AA4B55A27815AF /* Inter-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Black.ttf"; path = "../assets/fonts/Inter-Black.ttf"; sourceTree = "<group>"; };
-		06321CC07CDF43FE8F7A7C65 /* Agrandir-WideBlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-WideBlackItalic.otf"; path = "../assets/fonts/Agrandir-WideBlackItalic.otf"; sourceTree = "<group>"; };
-		0C9E1A088864400FA60019A2 /* Inter-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Thin.ttf"; path = "../assets/fonts/Inter-Thin.ttf"; sourceTree = "<group>"; };
+		0170248D77AA4B55A27815AF /* Inter-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Black.ttf"; path = "../assets/fonts/Inter-Black.ttf"; sourceTree = "<group>"; };
+		06321CC07CDF43FE8F7A7C65 /* Agrandir-WideBlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-WideBlackItalic.otf"; path = "../assets/fonts/Agrandir-WideBlackItalic.otf"; sourceTree = "<group>"; };
+		0C9E1A088864400FA60019A2 /* Inter-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Thin.ttf"; path = "../assets/fonts/Inter-Thin.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AwesomeProject2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeProject2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AwesomeProject2/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = AwesomeProject2/AppDelegate.mm; sourceTree = "<group>"; };
@@ -59,28 +61,31 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AwesomeProject2/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AwesomeProject2/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-AwesomeProject2-AwesomeProject2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeProject2-AwesomeProject2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F6C32FF71184C8292915CF8 /* Inter-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.ttf"; path = "../assets/fonts/Inter-Bold.ttf"; sourceTree = "<group>"; };
-		2A30E12A6E19418DBEE2873A /* Agrandir-Tight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-Tight.otf"; path = "../assets/fonts/Agrandir-Tight.otf"; sourceTree = "<group>"; };
+		1F6C32FF71184C8292915CF8 /* Inter-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.ttf"; path = "../assets/fonts/Inter-Bold.ttf"; sourceTree = "<group>"; };
+		2A30E12A6E19418DBEE2873A /* Agrandir-Tight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-Tight.otf"; path = "../assets/fonts/Agrandir-Tight.otf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-AwesomeProject2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject2.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeProject2/Pods-AwesomeProject2.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-AwesomeProject2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject2.release.xcconfig"; path = "Target Support Files/Pods-AwesomeProject2/Pods-AwesomeProject2.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-AwesomeProject2-AwesomeProject2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject2-AwesomeProject2Tests.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeProject2-AwesomeProject2Tests/Pods-AwesomeProject2-AwesomeProject2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-AwesomeProject2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeProject2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		612D8441221042D198153B83 /* Inter-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Light.ttf"; path = "../assets/fonts/Inter-Light.ttf"; sourceTree = "<group>"; };
-		678E6A15C70542ED868369A2 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.ttf"; path = "../assets/fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
-		6B55BB3C8C584DFCA0D5D5D3 /* DINOffcPro-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DINOffcPro-Black.ttf"; path = "../assets/fonts/DINOffcPro-Black.ttf"; sourceTree = "<group>"; };
-		719841974B71477D9AD1560D /* Agrandir-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-Regular.otf"; path = "../assets/fonts/Agrandir-Regular.otf"; sourceTree = "<group>"; };
-		7D967DF9301D49D58A4C081B /* Agrandir-TextBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-TextBold.otf"; path = "../assets/fonts/Agrandir-TextBold.otf"; sourceTree = "<group>"; };
+		612D8441221042D198153B83 /* Inter-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Light.ttf"; path = "../assets/fonts/Inter-Light.ttf"; sourceTree = "<group>"; };
+		678E6A15C70542ED868369A2 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.ttf"; path = "../assets/fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		6B55BB3C8C584DFCA0D5D5D3 /* DINOffcPro-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DINOffcPro-Black.ttf"; path = "../assets/fonts/DINOffcPro-Black.ttf"; sourceTree = "<group>"; };
+		719841974B71477D9AD1560D /* Agrandir-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-Regular.otf"; path = "../assets/fonts/Agrandir-Regular.otf"; sourceTree = "<group>"; };
+		7D967DF9301D49D58A4C081B /* Agrandir-TextBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-TextBold.otf"; path = "../assets/fonts/Agrandir-TextBold.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AwesomeProject2/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-AwesomeProject2-AwesomeProject2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject2-AwesomeProject2Tests.release.xcconfig"; path = "Target Support Files/Pods-AwesomeProject2-AwesomeProject2Tests/Pods-AwesomeProject2-AwesomeProject2Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A38921A019774B198F318A48 /* Inter-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.ttf"; path = "../assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; };
-		AEC44C0313E141EFBEF4BB9D /* Agrandir-GrandHeavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-GrandHeavy.otf"; path = "../assets/fonts/Agrandir-GrandHeavy.otf"; sourceTree = "<group>"; };
-		B027244E570A412584D37F88 /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
-		C1954F4A6D5C4EA38B05E9F8 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraLight.ttf"; path = "../assets/fonts/Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
-		C31EDE708C274393AAF7CF37 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraBold.ttf"; path = "../assets/fonts/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
-		C8328504426B432A9BCFDF01 /* Agrandir-Narrow.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-Narrow.otf"; path = "../assets/fonts/Agrandir-Narrow.otf"; sourceTree = "<group>"; };
-		D119A32C3CA545FBBBC2C7D3 /* Agrandir-ThinItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-ThinItalic.otf"; path = "../assets/fonts/Agrandir-ThinItalic.otf"; sourceTree = "<group>"; };
-		D2FB8E9118334F7CA6EB5749 /* Agrandir-WideLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-WideLight.otf"; path = "../assets/fonts/Agrandir-WideLight.otf"; sourceTree = "<group>"; };
-		EB04B60B637949DEA97955D6 /* Agrandir-GrandLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-GrandLight.otf"; path = "../assets/fonts/Agrandir-GrandLight.otf"; sourceTree = "<group>"; };
+		9F8DFA452A250E1E00208904 /* AwesomeProject2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwesomeProject2-Bridging-Header.h"; sourceTree = "<group>"; };
+		9F8DFA462A250E1E00208904 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
+		9F9AD5D82A2A31B600F4C36E /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		A38921A019774B198F318A48 /* Inter-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.ttf"; path = "../assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; };
+		AEC44C0313E141EFBEF4BB9D /* Agrandir-GrandHeavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-GrandHeavy.otf"; path = "../assets/fonts/Agrandir-GrandHeavy.otf"; sourceTree = "<group>"; };
+		B027244E570A412584D37F88 /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
+		C1954F4A6D5C4EA38B05E9F8 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraLight.ttf"; path = "../assets/fonts/Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C31EDE708C274393AAF7CF37 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraBold.ttf"; path = "../assets/fonts/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C8328504426B432A9BCFDF01 /* Agrandir-Narrow.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-Narrow.otf"; path = "../assets/fonts/Agrandir-Narrow.otf"; sourceTree = "<group>"; };
+		D119A32C3CA545FBBBC2C7D3 /* Agrandir-ThinItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-ThinItalic.otf"; path = "../assets/fonts/Agrandir-ThinItalic.otf"; sourceTree = "<group>"; };
+		D2FB8E9118334F7CA6EB5749 /* Agrandir-WideLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-WideLight.otf"; path = "../assets/fonts/Agrandir-WideLight.otf"; sourceTree = "<group>"; };
+		EB04B60B637949DEA97955D6 /* Agrandir-GrandLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-GrandLight.otf"; path = "../assets/fonts/Agrandir-GrandLight.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -168,7 +173,6 @@
 				0C9E1A088864400FA60019A2 /* Inter-Thin.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -181,6 +185,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				9F9AD5D82A2A31B600F4C36E /* fonts */,
+				9F8DFA462A250E1E00208904 /* dummy.swift */,
 				13B07FAE1A68108700A75B9A /* AwesomeProject2 */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* AwesomeProject2Tests */,
@@ -188,6 +194,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
 				6D809CC339E74749890460AF /* Resources */,
+				9F8DFA452A250E1E00208904 /* AwesomeProject2-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -273,7 +280,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -319,6 +326,7 @@
 				D19BFEF1AF3B495985C1F716 /* Agrandir-Tight.otf in Resources */,
 				06F59933507341F78A3FE968 /* Agrandir-WideBlackItalic.otf in Resources */,
 				D2BD619A05A04DC2B45FFF8A /* Agrandir-WideLight.otf in Resources */,
+				9F9AD5D92A2A31B700F4C36E /* fonts in Resources */,
 				DB0760B3642444AC8F25308C /* DINOffcPro-Black.ttf in Resources */,
 				5C1454C6D83D4298B29F9700 /* Inter-Black.ttf in Resources */,
 				0023465198F84F45ACA581C5 /* Inter-Bold.ttf in Resources */,
@@ -498,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				9F8DFA472A250E1E00208904 /* dummy.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-AwesomeProject2-AwesomeProject2Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -544,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-AwesomeProject2-AwesomeProject2Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = AwesomeProject2Tests/Info.plist;
@@ -585,6 +596,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = AwesomeProject2;
+				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeProject2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -611,6 +623,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = AwesomeProject2;
+				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeProject2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

@@ -1,17 +1,15 @@
-import {Text} from 'native-base';
+import {Heading, Text} from 'native-base';
 
 export function CustomHeader({text}) {
   return (
-    <Text
-      style={{
-        fontFamily: 'Agrandir-GrandHeavy',
-        fontSize: 20,
-        fontWeight: '900',
-        fontStyle: 'italic',
-        color: 'white',
-      }}>
+    <Heading
+      fontFamily="Agrandir-GrandHeavy"
+      fontSize={20}
+      fontWeight={900}
+      fontStyle="italic"
+      color="white">
       {text}
-    </Text>
+    </Heading>
   );
 }
 
