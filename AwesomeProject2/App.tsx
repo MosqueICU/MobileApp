@@ -18,6 +18,7 @@ import {
 import {QuranPageSurahScreen} from './pages/QuranPage.Surah';
 import AudioPlayer from './pages/AudioPlayer';
 import MapPage from './pages/MapPage';
+import BookReader from './pages/BookReader';
 
 const Stack = createNativeStackNavigator();
 
@@ -82,9 +83,9 @@ function App() {
 
               {/* QURAN PAGE ROUTES END */}
               <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
+              <Stack.Screen name="BookReader" component={BookReader} />
               {/* MAP  BLOCK */}
-              <Stack.Group
-                screenOptions={{ headerShown: false}}>
+              <Stack.Group screenOptions={{headerShown: false}}>
                 <Stack.Screen name="Map" component={MapPage} />
               </Stack.Group>
               {/* MAPBLOCKEND */}
