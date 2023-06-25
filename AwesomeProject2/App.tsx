@@ -19,6 +19,7 @@ import {QuranPageSurahScreen} from './pages/QuranPage.Surah';
 import AudioPlayer from './pages/AudioPlayer';
 import MapPage from './pages/MapPage';
 import BookReader from './pages/BookReader';
+import {HadithPageCollectionScreen} from './pages/HadithPage.Collection';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,10 +44,19 @@ function App() {
                 <Stack.Screen name="Thikr" component={ThikrPage} />
                 <Stack.Screen name="Educate" component={EducatePage} /> */}
                 <Stack.Screen name="Quran" component={QuranPage} />
-                <Stack.Screen name="Hadith" component={HadithPage} />
                 <Stack.Screen name="Charity" component={CharityPage} />
+                <Stack.Screen name="Hadith" component={HadithPage} />
               </Stack.Group>
               {/* BASIC PAGE ROUTES END */}
+              {/* HADITH PAGE ROUTES */}
+              <Stack.Group screenOptions={{headerShown: false}}>
+                <Stack.Screen
+                  name="HadithCollection"
+                  component={HadithPageCollectionScreen}
+                />
+              </Stack.Group>
+
+              {/* HADITH PAGE ROUTES END */}
               {/* QURAN PAGE ROUTES */}
               <Stack.Group screenOptions={{headerShown: true}}>
                 <Stack.Screen

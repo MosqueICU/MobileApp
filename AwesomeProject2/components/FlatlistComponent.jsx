@@ -299,7 +299,8 @@ export function HadithEditionsFlatlist() {
         renderItem={({item}) => (
           <Pressable
             onPress={() => {
-              navigation.navigate('BookReader');
+              navigation.goBack();
+              navigation.navigate('HadithCollection', {item});
             }}>
             <VStack p={5} space={1}>
               <Image alt={item.title} w={124} h={183} source={item.uri} />
