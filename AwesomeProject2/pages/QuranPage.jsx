@@ -32,8 +32,8 @@ const QuranPage = () => {
           <HStack justifyContent={'space-between'}>
             <CustomHeader text="All surahs" />
             <HStack>
-              <CustomHeader text="1" />
-              <CustomHeader text="2" />
+              <CustomHeader text="114" />
+              {/* <CustomHeader text="2" /> */}
             </HStack>
           </HStack>
           {/* <Text style={{color: 'white'}}>

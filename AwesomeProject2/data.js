@@ -5,18 +5,18 @@ export const MyListData = [
     uri: require('./assets/images/AlQuranBook2.png'),
     route: 'Hadith',
   },
-  {
-    id: '2',
-    title: 'Charity',
-    route: 'Charity',
-    uri: require('./assets/images/CharityBox3.png'),
-  },
   // {
-  //   id: '3',
-  //   title: 'Compass',
-  //   route: 'Compass',
-  //   uri: require('./assets/images/Kaaba3.png'),
+  //   id: '2',
+  //   title: 'Charity',
+  //   route: 'Charity',
+  //   uri: require('./assets/images/CharityBox3.png'),
   // },
+  {
+    id: '3',
+    title: 'Compass',
+    route: 'Compass',
+    uri: require('./assets/images/Kaaba3.png'),
+  },
   // {
   //   id: '4',
   //   title: 'Thikr',

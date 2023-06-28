@@ -1,16 +1,17 @@
 // In App.js in a new project
 
 import * as React from 'react';
-import {Text, ScrollView} from 'react-native';
+import {Text, ScrollView, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {MiniMap} from '../pages/MapPage';
-// import RiveComponent from '../components/RiveComponent';
+import {LocationMap, MiniMap} from '../pages/MapPage';
+import RiveComponent from '../components/RiveComponent';
 import {MyListFlatlist} from '../components/FlatlistComponent';
 import {Heading, VStack, Box, Center, HStack} from 'native-base';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {ExploreFlatlist} from '../components/FlatlistComponent';
 import BottomsheetModalComponent from '../components/BottomsheetModalComponent';
 import {CustomHeader, CustomSubHeader} from '../components/TextVariations';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default function HomePage() {
   const navigation = useNavigation();
@@ -24,11 +25,41 @@ export default function HomePage() {
           </VStack>
         </HStack>
         <Center mt="10" h="20">
-          {/* <RiveComponent
-            resourceName={'ratings'}
+          <RiveComponent
+            resourceName={'KunaiRating'}
             styleProp={{width: '100%', height: 200}}
-          /> */}
+          />
         </Center>
+        <HStack alignItems={'center'} space={3}>
+          <HStack alignItems={'center'} space={2}>
+            <Text
+              style={{
+                fontSize: 10,
+                fontFamily: 'Inter-Bold',
+                color: 'white',
+              }}>
+              Jummah at
+            </Text>
+            <Text
+              style={{
+                fontSize: 10,
+
+                fontFamily: 'Inter-Bold',
+                color: 'grey',
+              }}>
+              Al Iman Mosque, 2KM
+            </Text>
+          </HStack>
+
+          <Text
+            style={{
+              fontSize: 15,
+              fontFamily: 'Inter-Regular',
+              color: 'grey',
+            }}>
+            -1:22:26
+          </Text>
+        </HStack>
       </Box>
 
       <Box>
@@ -74,7 +105,7 @@ export default function HomePage() {
             </Box>
           </HStack>
           <ExploreFlatlist />
-          <TouchableOpacity
+          {/* <TouchableOpacity
             onPress={() => {
               navigation.navigate('Map');
             }}>
@@ -109,17 +140,86 @@ export default function HomePage() {
                 </Text>
               </Box>
             </Box>
-          </TouchableOpacity>
-          <Center pb="10">
+          </TouchableOpacity> */}
+          {/* <Center pb="10">
             <Heading sub color="white">
               You are not subscribed to anyone
             </Heading>
             <Heading sub color="grey">
               News from subscriptions will appear here
             </Heading>
-          </Center>
+          </Center> */}
         </Box>
+      </Box>
+      <Box
+        overflow="hidden"
+        // borderWidth="1px"
+        // borderColor={'grey'}
+        w="100%"
+        h="200">
+        <LocationMap lat={24.471153} lon={39.6111216} />
+        {/* <Box
+          onPress={() => {
+            navigation.goBack();
+          }}
+          px="5"
+          justifyContent="center"
+          // roundedBottom="xl"
+          position="absolute"
+          opacity="0.7"
+          bg="black"
+          borderBottomWidth="1px"
+          borderColor={'grey'}
+          bottom="0"
+          w="100%"
+          h="10">
+          <Text
+            onPress={() => {
+              navigation.goBack();
+            }}
+            style={{
+              fontSize: 15,
+              fontFamily: 'DINOffcPro-Black',
+              color: 'white',
+            }}>
+            Go back
+          </Text>
+        </Box> */}
+        <GradientBox />
       </Box>
     </ScrollView>
   );
 }
+
+const GradientBox = ({navigation}) => {
+  return (
+    <TouchableOpacity
+      onPress={() => {
+        navigation.goBack();
+      }}
+      style={styles.container}>
+      <LinearGradient
+        colors={['transparent', 'black']}
+        start={{x: 0, y: 1}}
+        end={{x: 0, y: 0}}
+        style={styles.gradient}
+      />
+    </TouchableOpacity>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    height: 200,
+    justifyContent: 'center',
+  },
+  gradient: {
+    flex: 1,
+    // borderBottomWidth: 1,
+    // borderColor: 'grey',
+    opacity: 0.95,
+  },
+});

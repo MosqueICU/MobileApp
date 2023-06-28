@@ -23,6 +23,8 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		84CA88EEFE3D45B181865573 /* Agrandir-GrandLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB04B60B637949DEA97955D6 /* Agrandir-GrandLight.otf */; };
 		940121454C0544EA9B85D1C0 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 612D8441221042D198153B83 /* Inter-Light.ttf */; };
+		9F7675BB2A4B8C7100CB9301 /* BullseyeRating.riv in Resources */ = {isa = PBXBuildFile; fileRef = 9F7675B92A4B8C7100CB9301 /* BullseyeRating.riv */; };
+		9F7675BC2A4B8C7100CB9301 /* KunaiRating.riv in Resources */ = {isa = PBXBuildFile; fileRef = 9F7675BA2A4B8C7100CB9301 /* KunaiRating.riv */; };
 		9F8DFA472A250E1E00208904 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DFA462A250E1E00208904 /* dummy.swift */; };
 		9F9AD5D92A2A31B700F4C36E /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 9F9AD5D82A2A31B600F4C36E /* fonts */; };
 		BF6804CB5FB447DBAB8AF7FF /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1954F4A6D5C4EA38B05E9F8 /* Inter-ExtraLight.ttf */; };
@@ -74,6 +76,8 @@
 		7D967DF9301D49D58A4C081B /* Agrandir-TextBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Agrandir-TextBold.otf"; path = "../assets/fonts/Agrandir-TextBold.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AwesomeProject2/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-AwesomeProject2-AwesomeProject2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject2-AwesomeProject2Tests.release.xcconfig"; path = "Target Support Files/Pods-AwesomeProject2-AwesomeProject2Tests/Pods-AwesomeProject2-AwesomeProject2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9F7675B92A4B8C7100CB9301 /* BullseyeRating.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = BullseyeRating.riv; path = ../../../../../../../Downloads/BullseyeRating.riv; sourceTree = "<group>"; };
+		9F7675BA2A4B8C7100CB9301 /* KunaiRating.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = KunaiRating.riv; path = ../../../../../../../Downloads/KunaiRating.riv; sourceTree = "<group>"; };
 		9F8DFA452A250E1E00208904 /* AwesomeProject2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwesomeProject2-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F8DFA462A250E1E00208904 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		9F9AD5D82A2A31B600F4C36E /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				9F7675B82A4B11DD00CB9301 /* RiveAssets */,
 				9F9AD5D82A2A31B600F4C36E /* fonts */,
 				9F8DFA462A250E1E00208904 /* dummy.swift */,
 				13B07FAE1A68108700A75B9A /* AwesomeProject2 */,
@@ -208,6 +213,15 @@
 				00E356EE1AD99517003FC87E /* AwesomeProject2Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9F7675B82A4B11DD00CB9301 /* RiveAssets */ = {
+			isa = PBXGroup;
+			children = (
+				9F7675B92A4B8C7100CB9301 /* BullseyeRating.riv */,
+				9F7675BA2A4B8C7100CB9301 /* KunaiRating.riv */,
+			);
+			path = RiveAssets;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -326,6 +340,7 @@
 				D19BFEF1AF3B495985C1F716 /* Agrandir-Tight.otf in Resources */,
 				06F59933507341F78A3FE968 /* Agrandir-WideBlackItalic.otf in Resources */,
 				D2BD619A05A04DC2B45FFF8A /* Agrandir-WideLight.otf in Resources */,
+				9F7675BB2A4B8C7100CB9301 /* BullseyeRating.riv in Resources */,
 				9F9AD5D92A2A31B700F4C36E /* fonts in Resources */,
 				DB0760B3642444AC8F25308C /* DINOffcPro-Black.ttf in Resources */,
 				5C1454C6D83D4298B29F9700 /* Inter-Black.ttf in Resources */,
@@ -333,6 +348,7 @@
 				CC53551932BB402EB24C3BEC /* Inter-ExtraBold.ttf in Resources */,
 				BF6804CB5FB447DBAB8AF7FF /* Inter-ExtraLight.ttf in Resources */,
 				940121454C0544EA9B85D1C0 /* Inter-Light.ttf in Resources */,
+				9F7675BC2A4B8C7100CB9301 /* KunaiRating.riv in Resources */,
 				EB706A02CF7F4298A9409D2A /* Inter-Medium.ttf in Resources */,
 				ECAEDD3E1BDE44EFA9D67DC8 /* Inter-Regular.ttf in Resources */,
 				CC13B201E8284F4FB49F42ED /* Inter-SemiBold.ttf in Resources */,

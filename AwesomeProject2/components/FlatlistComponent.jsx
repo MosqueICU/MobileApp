@@ -120,20 +120,20 @@ export function ExploreFlatlist() {
       recentText: 'Learn Akeedah',
       avatarUrl: require('../assets/images/Washing.png'),
     },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      fullName: 'NEW local reciters',
-      timeStamp: '11:11 PM',
-      recentText: 'Listen to a Quran recitation',
-      avatarUrl: require('../assets/images/AlQuranBookRead.png'),
-    },
-    {
-      id: '28694a0f-3da1-471f-bd96-142456e29d72',
-      fullName: '5 Mosques near you',
-      timeStamp: '12:47 PM',
-      recentText: 'Attend the friday Jummah',
-      avatarUrl: require('../assets/images/Mosque.png'),
-    },
+    // {
+    //   id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    //   fullName: 'NEW local reciters',
+    //   timeStamp: '11:11 PM',
+    //   recentText: 'Listen to a Quran recitation',
+    //   avatarUrl: require('../assets/images/AlQuranBookRead.png'),
+    // },
+    // {
+    //   id: '28694a0f-3da1-471f-bd96-142456e29d72',
+    //   fullName: '5 Mosques near you',
+    //   timeStamp: '12:47 PM',
+    //   recentText: 'Attend the friday Jummah',
+    //   avatarUrl: require('../assets/images/Mosque.png'),
+    // },
   ];
   return (
     <Box>

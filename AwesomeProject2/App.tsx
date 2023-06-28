@@ -58,11 +58,14 @@ function App() {
 
               {/* HADITH PAGE ROUTES END */}
               {/* QURAN PAGE ROUTES */}
-              <Stack.Group screenOptions={{headerShown: true}}>
+              <Stack.Group screenOptions={{headerShown: false}}>
                 <Stack.Screen
                   name="QuranSurah"
                   component={QuranPageSurahScreen}
                 />
+              </Stack.Group>
+
+              <Stack.Group screenOptions={{headerShown: true}}>
                 {/* each specific surah ^ */}
 
                 {/* recitations block */}

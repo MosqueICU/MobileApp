@@ -59,6 +59,7 @@ export const MiniMap = () => {
     <Mapbox.MapView
       style={{flex: 1, borderRadius: 10}}
       logoEnabled={false}
+      visibleCoordinateBounds={false}
       compassEnabled={false}
       styleURL="mapbox://styles/mosqueicu/cli0jf8m402ff01qyffls6jdc/draft">
       <Mapbox.Camera
@@ -76,6 +77,36 @@ export const MiniMap = () => {
           </View>
         </PointAnnotation>
       </View>
+      <FillExtrusionLayer
+        minZoomLevel={10}
+        maxZoomLevel={30}
+        style={{
+          visibility: 'visible',
+          fillExtrusionOpacity: 0.5,
+          fillExtrusionHeight: 20,
+          fillExtrusionOpacityTransition: {duration: 300, delay: 50},
+        }}
+        id="building"
+      />
+    </Mapbox.MapView>
+  );
+};
+
+export const LocationMap = ({lon, lat}) => {
+  return (
+    <Mapbox.MapView
+      style={{flex: 1}}
+      logoEnabled={false}
+      compassEnabled={false}
+      styleURL="mapbox://styles/mosqueicu/cli0jf8m402ff01qyffls6jdc/draft">
+      <Mapbox.Camera
+        zoomLevel={10}
+        // pitch={60}
+        animationMode={'flyTo'}
+        animationDuration={2000}
+        centerCoordinate={[lon, lat]} // eslint-disable-next-line prettier/prettier
+      />
+
       <FillExtrusionLayer
         minZoomLevel={10}
         maxZoomLevel={30}
